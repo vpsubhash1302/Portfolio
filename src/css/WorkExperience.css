@@ -1,0 +1,144 @@
+/* General styles for the work experience section */
+.work-experience {
+  padding: 40px;
+  background: linear-gradient(120deg, #1f1c2c, #928dab);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.work-experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.work-experience-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #272726;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.work-experience-title::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background: #2d2d2d;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+}
+
+/* Horizontal layout for the cards */
+.work-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  position: relative;
+}
+
+/* Individual cards */
+.work-card {
+  background-color: #fefafa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  text-align: left;
+  position: relative;
+}
+
+.work-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.work-card-title {
+  font-size: 1.4rem;
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.work-card-date {
+  font-size: 1.1rem;
+  color: #242424;
+  margin-bottom: 15px;
+}
+
+.work-card-description {
+  font-size: 1rem;
+  color: #202020;
+  line-height: 1.6;
+}
+
+.work-card-description ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.work-card-description li {
+  margin-bottom: 8px;
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+  color: #3a3a3a;
+}
+
+.work-card-description li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ff9800;
+  font-size: 1.2rem;
+  top: 0;
+}
+
+/* Arrow styles */
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrow {
+  width: 80px;
+  height: 2px;
+  background-color: #ff9800;
+  position: relative;
+}
+
+.arrow::before,
+.arrow::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #ff9800;
+}
+
+.arrow::before {
+  transform: rotate(45deg);
+  top: -6px;
+  right: -10px;
+}
+
+.arrow::after {
+  transform: rotate(-45deg);
+  bottom: -6px;
+  right: -10px;
+}

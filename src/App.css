@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 768px) {
+  .component {
+    padding: 10px;
+  }
+}
+
+.component {
+  min-height: 100vh; /* Full viewport height */
+  overflow: auto;    /* Add scroll if content overflows */
+  padding: 20px;
+}
+

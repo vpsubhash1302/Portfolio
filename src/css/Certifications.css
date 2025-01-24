@@ -1,0 +1,71 @@
+.certifications {
+    padding: 60px 20px;
+    background: linear-gradient(120deg, #3a1c71, #d76d77, #ffaf7b); /* Background Gradient */
+    min-height: 80vh;
+  }
+  
+  .certifications h2 {
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff; /* White Color for Better Contrast */
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+    letter-spacing: 2px;
+  }
+  
+  .certifications ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .certifications li {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; /* White text for better readability */
+    margin-bottom: 15px;
+    padding: 15px;
+    background: linear-gradient(120deg, #ffaf7b, #d76d77); /* Gradient Background for Each Item */
+    border-left: 6px solid #3a1c71; /* Deep Purple Accent */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Softer Shadow */
+    border-radius: 12px;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .certifications li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    transform: skewX(-45deg);
+    transition: left 0.6s ease;
+  }
+  
+  .certifications li:hover::before {
+    left: 100%;
+  }
+  
+  .certifications li:nth-child(2n) {
+    background: linear-gradient(120deg, #3a1c71, #d76d77); /* Gradient Variation for Alternating Items */
+    border-left-color: #ffaf7b; /* Peach Accent */
+  }
+  
+  .certifications li:nth-child(2n+1) {
+    background: linear-gradient(120deg, #d76d77, #ffaf7b); /* Alternate Gradient */
+    border-left-color: #3a1c71; /* Deep Purple Accent */
+  }
+  
+  .certifications li:hover {
+    transform: scale(1.08); /* Slight Zoom-In Effect on Hover */
+    color: #333; /* Text Color Change for Hover */
+    background: linear-gradient(120deg, #ffffff, #f0f0f0); /* Light Gradient Background on Hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Enhanced Shadow Effect on Hover */
+  }
+  
