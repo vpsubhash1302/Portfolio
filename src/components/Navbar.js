@@ -4,7 +4,8 @@ import '../css/Navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-name" >Subhash V P</div>
+      {/* Clicking on this will scroll to the banner */}
+      <a href="#banner" className="navbar-name">Subhash V P</a>
       <ul className="navbar-menu">
         <li><a href="#education">Education</a></li>
         <li><a href="#work-experience">Work Experience</a></li>

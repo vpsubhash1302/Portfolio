@@ -1,67 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(120deg, #1f1c2c, #928dab);
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    overflow: hidden;
-    position: relative;
-    perspective: 1000px; /* Perspective to create 3D effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #1f1c2c, #928dab);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  perspective: 1000px;
+}
+
+.banner-content {
+  max-width: 800px;
+  transform-style: preserve-3d;
+  animation: content3DRotate 5s infinite alternate;
+}
+
+.banner h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  
+}
+
+.banner p {
+  font-size: 22px;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.resume-button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.download-icon {
+  transition: transform 0.3s ease;
+}
+
+.resume-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.resume-button:hover .download-icon {
+  transform: translateY(2px);
+}
+
+.resume-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.resume-button:hover::before {
+  left: 100%;
+}
+
+/*@keyframes content3DRotate {
+  0% {
+    transform: rotateY(0deg);
   }
-  
-  .banner-content {
-    max-width: 800px;
-    transform-style: preserve-3d; /* Enables 3D effects for child elements */
-    animation: content3DRotate 5s infinite alternate; /* Continuous 3D Rotation Animation */
+  100% {
+    transform: rotateY(10deg);
   }
-  
-  .banner h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Enhanced Shadow for 3D Effect */
-    animation: title3DRotate 3s ease-in-out 1s infinite alternate; /* 3D Rotation Animation */
+}
+
+@keyframes title3DRotate {
+  0% {
+    transform: rotateY(-20deg);
   }
-  
-  .banner p {
-    font-size: 22px;
-    line-height: 1.6;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 10px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Enhanced Shadow for 3D Effect */
-    
+  100% {
+    transform: rotateY(20deg);
   }
-  
-  /* Keyframes for 3D Animations 
-   @keyframes content3DRotate {
-    0% {
-      transform: rotateY(0deg);
-    }
-    100% {
-      transform: rotateY(10deg); 
-    }
+}
+
+@keyframes text3DTilt {
+  0% {
+    transform: rotateX(0deg);
   }
-  
-  @keyframes title3DRotate {
-    0% {
-      transform: rotateY(-20deg);
-    }
-    100% {
-      transform: rotateY(20deg); 
-    }
+  100% {
+    transform: rotateX(15deg);
   }
-  
-  @keyframes text3DTilt {
-    0% {
-      transform: rotateX(0deg);
-    }
-    100% {
-      transform: rotateX(15deg); /* Tilt text in 3D 
-    }
-  }*/
-  
+}*/

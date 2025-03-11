@@ -1,8 +1,10 @@
 import React from 'react';
-import '../css/Banner.css'; // Import the CSS file
+import '../css/Banner.css';
 
 const Banner = () => {
+
   return (
+    <section id="banner">
     <div className="banner">
       <div className="banner-overlay"></div>
       <div className="banner-content">
@@ -13,6 +15,7 @@ const Banner = () => {
         </p>
       </div>
     </div>
+    </section>
   );
 }
 
